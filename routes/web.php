@@ -15,33 +15,6 @@
 
 Route::get('/', function () {
 
-    /*$images = Image::all();
-
-    foreach ($images as $image) {
-
-        echo $image->image_path . "<br/>";
-        echo $image->description . "<br/>";
-        echo $image->users->name . ' ' . $image->users->surname;
-
-
-        if (count($image->comments) >= 1) {
-
-            echo '<h4>Comentarios</h4>';
-
-            foreach ($image->comments as $comment) {
-
-                echo $comment->users->name . ' ' . $comment->users->surname. ':';
-                echo $comment->content. '<br/>';
-            }
-        }
-        echo '<br/>';
-        echo 'LIKES:'. count($image->likes);
-
-        echo "<hr/>";
-    }
-
-    die();*/
-
     return view('welcome');
 });
 
@@ -54,3 +27,11 @@ Route::get('/configuracion', 'UserController@config')->name('config');
 Route::get('/user/avatar/{filename}', 'UserController@getImage')->name('user.avatar');
 
 Route::post('/user/update', 'UserController@update')->name('user.update');
+
+Route::get('/subir-imagen', 'ImageController@create')->name('image.create');
+
+Route::post('/image/save', 'ImageController@save')->name('image.save');
+
+Route::get('/image/file/{filename}', 'ImageController@getImage')->name('image.file');
+
+Route::get('/imagen/{id}', 'ImageController@detail')->name('image.detail');

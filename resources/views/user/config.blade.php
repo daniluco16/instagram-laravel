@@ -7,14 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
 
-            @if(session('message'))
-
-            <div class="alert alert-success">
-                {{ session('message') }}
-
-            </div>
-
-            @endif
+            @include('includes.message')
             <div class="card">
                 <div class="card-header">Configuración de mi cuenta</div>
 
@@ -97,7 +90,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Guardar Cambios') }}
                                 </button>
                             </div>
                         </div>

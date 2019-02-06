@@ -8,8 +8,6 @@
 
             @include('includes.message')
 
-            @foreach($images as $image)
-
             <div class="card pub_image">
 
                 <div class="card-header">
@@ -25,15 +23,14 @@
                     @endif                    
 
                     <div class="data-user">
-                        <a href="{{ route('image.detail', ['id' => $image->id])}}">
-                            {{ $image->users->name . ' ' . $image->users->surname}}
 
-                            <span class="nickname">
+                        {{ $image->users->name . ' ' . $image->users->surname}}
 
-                                {{' | @' . $image->users->nick }}
+                        <span class="nickname">
 
-                            </span>
-                        </a>
+                            {{' | @' . $image->users->nick }}
+
+                        </span>
                     </div>
                 </div>
 
@@ -46,10 +43,7 @@
 
 
                     <div class="description">
-
-
                         <span class="nickname">{{'@'. $image->users->nick}}</span>
-
                         <p>{{ $image->description }}</p>
 
                     </div>
@@ -60,30 +54,16 @@
 
                     <div class="comments">
                         <a href="" class="btn btn-sm btn-comments">Comentarios {{count($image->comments)}}</a>
-
                     </div>
-                    <div class="fecha">
+
+                    <div class="fecha text-right">
                         <span class="nickname date">{{\FormatTime::LongTimeFilter($image->created_at) }}</span>
                     </div>
-
 
                 </div>
 
             </div>
-            @endforeach
 
-            <!--PAGINACIÓN-->
-
-            <div class="clearfix">
-
-
-
-            </div>
-            <div class="d-flex justify-content-center">
-
-                {{ $images->links()}}
-
-            </div>
 
         </div>
 

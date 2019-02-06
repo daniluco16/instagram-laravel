@@ -1,19 +1,97 @@
 form .avatar{
-    display: block;
     margin-bottom: 20px;
     width: 55px;
     height: 55px;   
 }
-.navbar .container-avatar{
+.navbar .container-avatar ,
+.pub_image .container-avatar{
     width: 35px;
     height: 35px;
     border-radius: 900px;
     overflow: hidden;
+    margin-left: 20px;
 }
 
-.navbar .container-avatar img{
+.pub_image{
+    
+    margin-bottom: 25px;
+    
+}
+.image-container{
+    
+    max-height: 400px;
+    overflow: hidden;
+    width: 100%;
+    
+}
 
+.image-container img {
+    
+    width: 100%;
+    
+}
+
+.pub_image .card-body{
+    
+    padding: 0px;
+    
+}
+
+.pub_image .description{
+    
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+
+.navbar .container-avatar img ,
+.pub_image .container-avatar img{
+    
     height: 100%;
+}
 
+.pub_image .container-avatar{
+
+    float: left;
+    margin-right: 20px;
 
 }
+.pub_image .data-user{
+
+    font-weight: bold;
+    line-height: 35px;
+
+}
+.pub_image .nickname{
+    
+    color: grey;
+    
+}
+.pub_image .btn-comments{
+    
+    margin: 20px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 0px;
+    
+}
+.likes img{
+    
+    width: 30px;
+}
+.likes{
+    float: left;
+    padding-right: 10px;
+    padding-left: 20px;
+    
+}
+.comments a{
+    
+    text-decoration: none;
+    font-size: 18px;
+}
+.fecha{
+    padding: 10px;
+    padding-right: 10px;
+}
+
