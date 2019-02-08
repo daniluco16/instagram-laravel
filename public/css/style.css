@@ -25,6 +25,7 @@ form .avatar{
     
 }
 
+
 .image-container img {
     
     width: 100%;
@@ -93,5 +94,11 @@ form .avatar{
 .fecha{
     padding: 10px;
     padding-right: 10px;
+}
+
+.pub_image .comments{
+    
+    padding: 30px;
+    
 }
 
