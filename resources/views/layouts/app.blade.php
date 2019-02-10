@@ -11,6 +11,11 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/main.js') }}"></script>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -53,26 +58,32 @@
                             @endif
                             @else
                             <li class="nav-item">
-                                <a href="{{ route('home') }}" class="nav-link">Inicio</a>
+                                <a href="{{ route('home') }}" class="nav-link"><i class="fas fa-home"></i>Inicio</a>
                             </li>
 
                             <li class="nav-item">
 
-                                <a href="{{ route('image.create') }}" class="nav-link">Subir Imagen</a>
+                               <a href="{{ route('likes') }}" class="nav-link"> <i class="fas fa-bookmark"></i>Favoritos</a>
 
                             </li>
-                            
-                            <li>
-                                
-                                @include('includes.avatar')
-                                
+
+                            <li class="nav-item">
+
+                                <a href="{{ route('image.create') }}" class="nav-link"><i class="fas fa-file-image"></i>Subir Imagen</a>
+
                             </li>
-                            
+
                             <li>
-                                
+
+                                @include('includes.avatar')
+
+                            </li>
+
+                            <li>
+
                                 &nbsp;&nbsp;
                             </li>
-                            
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
