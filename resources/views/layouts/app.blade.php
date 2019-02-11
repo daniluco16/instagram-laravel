@@ -66,6 +66,12 @@
                                <a href="{{ route('likes') }}" class="nav-link"> <i class="fas fa-bookmark"></i>Favoritos</a>
 
                             </li>
+                            
+                            <li class="nav-item">
+
+                               <a href="{{ route('user.index') }}" class="nav-link"> <i class="fas fa-bookmark"></i>Gente</a>
+
+                            </li>
 
                             <li class="nav-item">
 
@@ -91,7 +97,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                                    <a class="dropdown-item" href="">
+                                    <a class="dropdown-item" href="{{ route('profile', ['id' => Auth::user()->id])}}">
                                         Mi perfil
                                     </a>
                                     <a class="dropdown-item" href="{{ route('config') }}">
