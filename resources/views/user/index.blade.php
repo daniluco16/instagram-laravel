@@ -7,6 +7,22 @@
         <div class="col-md-7">
 
             <h1 class="d-flex justify-content-center">Usuarios</h1>
+            <form method="GET" action="{{route('user.index')}}" id="buscador">
+                <div class="row">
+
+                    <div class="form-group col">
+
+                        <input type="text" id="search" class="form-control">
+                    </div>
+                    <div class="form-group col btn-search">
+                        <input type="submit" value="Buscar" class="btn btn-success">
+                    </div>
+
+
+                </div>
+
+
+            </form>
             <hr>
             @foreach($users as $user)
 

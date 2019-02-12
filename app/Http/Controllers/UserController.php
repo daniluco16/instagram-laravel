@@ -27,11 +27,12 @@ class UserController extends Controller {
 
             $users = User::orderBy('id', 'desc')
                     ->paginate(5);
-
-            return view('user.index', [
+        }
+        
+        return view('user.index', [
                 'users' => $users
             ]);
-        }
+        
     }
 
     public function config() {
